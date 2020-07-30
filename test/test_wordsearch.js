@@ -35,4 +35,22 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+  it("should return true if the word is present and vertical", function() {
+    const result = wordSearch([
+      ['A', 'W', 'B', 'F', 'Q', 'U', 'A', 'L'],
+      ['S', 'E', 'A', 'N', 'F', 'E', 'L', 'D'],
+      ['Y', 'F', 'N', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'M', 'A', 'T', 'E', 'V', 'R', 'G'],
+      ['W', 'H', 'N', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'A', 'E', 'N', 'E', 'Y', 'B'],
+      ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'BANANA')
+
+    assert.isTrue(result);
+  });
+  it('should return "empty array given" if empty array is given', function() {
+    assert.equal(wordSearch([]), 'empty array given');
+  });
 });
